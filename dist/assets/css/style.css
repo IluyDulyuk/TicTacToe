@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Play&display=swap");
+body {
+  font-family: 'Play', sans-serif;
+  font-size: 20px;
+  overflow-y: hidden; }
+
+.container {
+  margin: 30px 20px 0px 20px;
+  position: relative; }
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+*, *:befor, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+:focus, :active {
+  outline: none; }
+
+a:focus, a:active {
+  outline: none; }
+
+nav, footer, header, aside {
+  display: block; }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjast: 100%;
+  -moz-text-size-adjast: 100%;
+  -webkit-text-size-adjast: 100%; }
+
+input, button, textarea {
+  font-family: inherit; }
+
+input::ms-clear {
+  display: none; }
+
+a, a:visited {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+ul li {
+  list-style: none; }
+
+img {
+  vertical-align: top; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+  font-weight: 400; }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative; }
+  .header__menu {
+    display: flex;
+    align-items: center;
+    width: 355px;
+    justify-content: space-between;
+    position: relative; }
+    .header__menu:after {
+      transition: 0.5s ease;
+      content: '';
+      width: 44px;
+      height: 1px;
+      background-color: #000;
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      transform: translateX(0px); }
+    .header__menu-item {
+      font-size: 20px;
+      cursor: pointer; }
+  .header__menu.move:after {
+    transform: translateX(708%); }
+  .header__trigger {
+    font-size: 20px;
+    cursor: pointer;
+    position: relative; }
+    .header__trigger:after {
+      content: '';
+      width: 50%;
+      height: 1px;
+      background-color: #000;
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      transform: translateX(-100%);
+      opacity: 0; }
+    .header__trigger:hover {
+      transition: all 0.3s ease; }
+      .header__trigger:hover:after {
+        opacity: 1;
+        transition: all 0.3s ease;
+        transform: translateX(0px); }
+  .header__modal {
+    display: none; }
+  .header__modal.active {
+    display: block;
+    position: absolute;
+    height: 426px;
+    width: 462px;
+    right: 0;
+    top: 59px;
+    padding: 30px 20px;
+    border: 1px solid #000;
+    overflow-y: scroll; }
+  .header__text {
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: 0.015em; }
